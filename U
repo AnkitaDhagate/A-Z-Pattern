@@ -1,0 +1,36 @@
+import java.util.*;
+class U 
+{
+    public static void main(String[]args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int row=1;
+        int space=n-2;
+        while(row<=n)
+        {
+           if(row>=1 && row<=n-1)
+           {
+             System.out.print("*"+" ");
+             int i=1;
+             while(i<=space)
+             {
+                System.out.print(" "+" ");
+                i++;
+             }
+             System.out.print("*"+" ");
+           }
+           if(row==n)
+           {
+            int j=1;
+            while(j<=n)
+            {
+                System.out.print("*"+" ");
+                j++;
+            }
+           }
+           row++;
+           System.out.println();
+        }
+    }
+}
