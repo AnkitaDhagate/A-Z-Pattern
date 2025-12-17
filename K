@@ -1,0 +1,47 @@
+import java.util.*;
+class K
+{
+    public static void main(String[]args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int row=1;
+        int star=1;
+        int space=n/2;
+        while(row<=n)
+        {
+            int i=1;
+            while(i<=star)
+            {
+                System.out.print("*"+" ");
+                i++;
+            }
+            int j=1;
+            while(j<=space)
+            {
+                System.out.print(" "+" ");
+                j++;
+            }
+            int m=1;
+            while(m<=star){
+                System.out.print("*"+" ");
+                m++;
+            }
+                 int k=1;
+            while(k<=space)
+            {
+                System.out.print(" "+" ");
+                k++;
+            }
+            if(row<n/2+1){
+                space--;
+            }
+            else{
+                space++;
+            }
+           
+            row++;
+           System.out.println();
+        }
+    }
+}
