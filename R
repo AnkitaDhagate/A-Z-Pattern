@@ -1,0 +1,60 @@
+import java.util.*;
+class R 
+{
+    public static void main(String[]args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int row = 1;
+        int space = n-2;
+        int space1 = 0;
+        int star = -1;
+        while(row<=n)
+        {
+            
+            if(row==1 || row==n/2+1)
+            {
+                
+                int j =1;
+                while(j<=n-1)
+                {
+                    System.out.print("*"+" ");
+                    j++;
+                }
+                
+            }
+            else
+            {
+                if(row>=2 && row<=n/2)
+                {
+                System.out.print("*"+" ");
+                int j=1;
+                while(j<=space)
+                {
+                    System.out.print(" "+" ");
+                    j++;
+                }
+                System.out.print("*"+" ");
+                }
+                
+            }
+            if(row>n/2+1 && row<=n)
+            {
+                System.out.print("*"+" ");
+                int g=1;
+                while(g<=space1)
+                {
+                    System.out.print(" "+" ");
+                    g++;
+                }
+                System.out.print("*"+" ");
+                space1++;
+            }
+            
+            row++;
+            System.out.println();
+        }
+        
+
+    }
+}    
