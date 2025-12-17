@@ -1,0 +1,39 @@
+import java.util.*;
+class O
+{
+    public static void main(String[]args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int row = 1;
+        int space=n-2;
+        while(row<=n)
+        {
+            int i=1;
+            if(row==1 || row==n)
+            {
+                System.out.print(" " + " ");
+                while(i<n-2)
+            {
+                System.out.print("*"+" ");
+                i++;
+            }
+            }
+            System.out.print("*"+" ");
+            if(row>=2 && row<=n-1)
+            {
+                int j=1;
+            while(j<=space)
+            {
+                System.out.print(" "+" ");
+                j++;
+                
+            }
+            System.out.print("*"+" ");
+            }
+           
+            row++;
+            System.out.println();
+        }
+    }
+}
