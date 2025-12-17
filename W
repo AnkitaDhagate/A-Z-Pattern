@@ -1,0 +1,71 @@
+import java.util.Scanner;
+
+public class W {
+
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int row = 1;
+        int space_1 = n - 2;
+        int space_2 = 1;
+        int space = n / 2;
+        while (row <= n) {
+            if (row != n) {
+                System.out.print("*" + " ");
+            }
+
+            if (row <= n / 2) {
+                int i = 1;
+                while (i <= space_1) {
+                    System.out.print("  ");
+                    i++;
+                }
+                System.out.print("*" + " ");
+            }
+            int i = 2;
+            if (row >= n / 2 + 1) {
+
+                while (i <= space) {
+                    if (row == n / 2 + 1) {
+                        System.out.print("  ");
+                    }
+
+                    i++;
+                }
+                System.out.print("*" + " ");
+
+            }
+            if (row > n / 2 + 1) {
+                int j = 1;
+                while (j <= space_2) {
+                    System.out.print("  ");
+                    j++;
+                }
+                space_2 += 2;
+            }
+            int k = 2;
+            if (row >= n / 2 + 1) {
+
+                while (k <= space) {
+                    if (row == n / 2 + 1) {
+                        System.out.print("  ");
+                    }
+
+                    k++;
+                }
+                System.out.print("*" + " ");
+            }
+            if (row >= n - 1) {
+                if (row != n) {
+                    System.out.print("*" + " ");
+                }
+
+            }
+
+            row++;
+            System.out.println();
+        }
+    }
+
+}
